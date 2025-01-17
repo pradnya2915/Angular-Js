@@ -1,0 +1,7 @@
+<!-- Display data from the observable -->
+<div class="data-list" *ngFor="let x of data">
+    {{x}}
+  </div>
+  
+  <!-- Button to trigger GetAsynchData() method -->
+  <button (click)="GetAsynchData()">Get data</button>

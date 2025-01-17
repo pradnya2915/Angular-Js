@@ -1,0 +1,32 @@
+<p>reactive-form works!</p>
+<form class="abc" [formGroup]="studentform">
+    first name<input type="text" name="firstname" formControlName="firstName" required minlength="3"
+        placeholder="enter first name">
+    @if(studentform.controls['firstName'].errors?.['required']){
+    <br> <span>this is required field</span>
+    }@else if (studentform.controls['firstName'].errors?.['minlength']){
+    <span>min length required</span>
+    }
+    <br>
+    <br>
+    lastname<input type="text" name="lastName" formControlName="lastName" placeholder="enter Middle name">
+    <br><br>
+    User name<input type="text" name="userName" formControlName="userName" placeholder="enter last name">
+    @if(studentform.controls['userName'].errors?.['email']){
+    <span>email not proper</span>
+    }
+    <br><br>
+    City<input type="text" name="city" formControlName="city" placeholder="enter city">
+    <br><br>
+    state<input type="number" name="state" formControlName="state" placeholder="enter state">
+    <br><br>
+
+    zipcode<input type="number" name="zipcode" formControlName="zipcode" placeholder="enter zipcode">
+    <br><br>
+
+    <br><br>
+    <button (click)="onSave()">submit</button>
+
+
+    <div>{{formValue}}</div>
+    <div>{{formValue | json}}</div>

@@ -1,0 +1,60 @@
+<p>directives works!</p>
+
+<div class="row pt-3">
+    <div class="col-3">
+        <div *ngIf="isDiv1Visiable" class="bg-danger p-3 text-center">
+            <h4>Div-1</h4>
+        </div>
+    </div>
+    <div class="col-3">
+        <div *ngIf="idDiv2Visible" class="bg-success p-3 text-center">
+            <h4>Div-2</h4>
+        </div>
+    </div>
+    <div class="col-3">
+        <div *ngIf="num1 == num2" class="bg-secondary p-3 text-center">
+            <h4>Div-3</h4>
+        </div>
+    </div>
+    <div class="col-3">
+        <!-- <div *ngIf="isActive" class="bg-primary p-3 text-center"> 
+            <h4>Div-4</h4>
+        </div> -->
+        <div *ngIf="stateName== 'Goa'" class="bg-primary p-3 text-center">
+            <h4>Div-4</h4>
+        </div>
+    </div>
+</div>
+<div class="row pt-3">
+    <div class="col-3 text-center">
+        <button class="btn btn-danger" (click)="hideDiv1()">Hide</button>
+        <button class="btn btn-primary mx-2" (click)="showDiv1()">show</button>
+    </div>
+    <div class="col-3 text-center">
+        <button class="btn btn-success" (click)="toggleDiv2()">toggle</button>
+
+    </div>
+    <div class="col-3">
+        <div>
+            <input type="text" [(ngModel)]="num1" placeholder="Num-1" class="width-50">
+            <input type="text" [(ngModel)]="num2" placeholder="Num-2" class="width-50">
+
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div style="display: flex; align-items: center;">
+            <input [(ngModel)]="isActive" type="checkbox" class="width-50">
+
+
+            <select [(ngModel)]="stateName">
+                <option value="Maharastra">Maharastra</option>
+                <option value="Goa">Goa</option>
+                <option value="mumbai">mumbai</option>
+                <option value="">USA</option>
+            </select>
+        </div>
+
+    </div>
+
+</div>

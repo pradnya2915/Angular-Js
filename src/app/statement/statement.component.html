@@ -1,0 +1,48 @@
+<div>
+    <label>
+        <input type="checkbox" name="option" (change)="toggleOption()">
+        Show Option
+    </label>
+</div>
+@if(showOption){
+    <div>
+        <label>
+        <input type="radio" name="skill" [(ngModel)]="selectionOption" value="Angular">
+        Angular
+    </label>
+    <label>
+        <input type="radio" name="skill" [(ngModel)]="selectionOption" value="Reactjs">
+        React js
+    </label>
+    <label>
+        <input type="radio" name="skill" [(ngModel)]="selectionOption" value="Vuejs">
+        Vue js
+    </label>
+    </div>
+
+   
+}
+
+
+@if(selectionOption== 'Angular'){
+    <img width="100px" src="assets/AngularLogo.webp" alt="Angular js"> 
+}@else if(selectionOption== 'Reactjs'){
+    <img width="100px" src="assets/reactlogo.png" alt="react"> 
+}@else{
+    <img width="100px" src="assets/vuejs.png" alt="vue"> 
+}
+
+<div><h1>Switch Statement</h1>
+@switch(selectionOption){
+    @case('Angular'){
+        <img width="100px" src="assets/AngularLogo.webp" alt="Angular js">  
+    }
+    @case('Reactjs'){
+        <img width="100px" src="assets/reactlogo.png" alt="react">   
+    }
+    @default{
+        <img width="100px" src="assets/vuejs.png" alt="vue"> 
+    }
+}
+</div>
+

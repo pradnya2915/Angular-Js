@@ -1,0 +1,55 @@
+<p>array-binding works!</p>
+<div class="">
+    <h1>welcome</h1>
+    <h2>{{title}}</h2>
+    <br><br>
+    <ul *ngFor="let item of myArr">
+        <li>{{item}}</li> 
+    </ul>
+    <ul *ngFor="let item of Arr">
+        <li>{{item}}</li> 
+    </ul>
+    <ul *ngFor="let items of Arr">
+        <li>{{items.name}} -Age: {{items.age}} -email:{{items.email}}</li> 
+    </ul>
+
+
+    <!-- <div *ngIf="islogged else logoutBack">
+        <h1>you are successfully login</h1>
+
+    </div> -->
+
+<ng-template [ngIf]="islogged" [ngIfElse]="logoutBack">
+<h1>welcome all</h1>
+</ng-template> 
+
+
+    <ng-template #logoutBack>
+        <h2>plz login</h2>
+    </ng-template>
+
+    <div [hidden]="!islogged">
+        <h1>hidden content</h1>
+    </div>
+
+
+    <br>
+    <!-- <select (change)="selectColor($event)">
+        <option>select option</option>
+        <option value="Red">Red</option>
+        <option value="white">white</option>
+        <option value="yellow">yellow</option>
+        <option value="pink">pink</option>
+    </select> -->
+
+    <!-- <div [ngSwitch]="choice">
+        <h1 style="color: red;" *ngSwitchCase="'red'">Red</h1>
+        <h1 style="color:black;" *ngSwitchCase="'black'">black</h1>
+        <h1 style="color: chartreuse;" *ngSwitchCase="'yellow'">yellow</h1>
+        <h1 style="color: rgb(93, 0, 255);" *ngSwitchCase="'voilet'">voilet</h1>
+    </div> -->
+
+
+
+     
+</div>

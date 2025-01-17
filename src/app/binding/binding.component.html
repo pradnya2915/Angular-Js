@@ -1,0 +1,54 @@
+<p>binding works!</p>
+
+
+<div class="row">
+    <div class="col-5">
+        <div class="row">
+            <div class="col-4">
+                interpolation way(one way data binding)
+                <h1>{{accountNumber}}</h1>
+                <input type="text" value="{{bank}}" placeholder="enter">
+                <input type="{{inputType}}" />
+                <div class="{{myClassName}}">welcome</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-5">
+        <div class="row">
+            <div class="col-4">
+                <input type="text" [value]="bank" placeholder="enter">
+                <div [class]="myClassName">danger</div>
+                <input [type]="inputType">
+
+                <!-- <span (click)="showAlter()">ok click here</span> -->
+
+
+
+
+                <button class="btn btn-success" (click)="showAlter()">click me</button>
+
+                <button type="submit" (click)="changeBank()">change bank</button>
+
+            </div>
+        </div>
+
+        <div class="col-4">
+            <input type="text" [(ngModel)]="bank"> -{{bank}}
+            <input type="checkbox" [(ngModel)]="isIndian" >
+            <div class="col-4">
+
+                
+            <select [(ngModel)]="stateName">
+                <option value="">select</option>
+                <option value="Maharastra">Maharastra</option>
+                <option value="Goa">Goa</option>
+                <option value="Delhi">Delhi</option>
+                <option value="mumbai">Mumbai</option>
+
+            </select>
+        </div>
+        </div>
+
+        </div>
+
+    </div>

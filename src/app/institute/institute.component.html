@@ -1,0 +1,47 @@
+<p>institute works!</p>
+
+<!-- <button (click)="NavigateFun()">Go</button> -->
+
+
+
+<div class="row">
+   <div class="col-4">
+    one way data binding 
+   <h1>{{name}}</h1>
+   <div>{{inputType}}</div>
+   <input type="text" value="{{name}}" placeholder="enter">
+   <h2>{{mobileNo}}</h2>
+   </div>
+   <div class="col-4"></div>
+
+   
+   <div class="col-4"></div>
+  
+   
+</div>
+<div class="row">
+    <div class="col-4">
+        two way data Binding
+        <input type="text" [value]="name">
+        <input type="text" [(ngModel)]="name">
+        <input [class]="myClassName">
+
+        <button class="btn btn-success" (click)="showAlters('welcome all')">click me</button>
+   <button class="btn btn-primary" (click)="changeName()">click here</button>
+
+   <select [(ngModel)]="stateNames">
+    <option value="">select</option
+        >
+    <option value="Maharastra">Maharastra</option>
+    <option value="Goa">Goa</option>
+    <option value="mumbai">mumbai</option>
+   </select>
+
+   <input type="text" [(ngModel)]="name">-{{name}}
+<input [type]="inputType">
+
+
+<div>{{bank()}}</div>
+
+    </div>
+</div>

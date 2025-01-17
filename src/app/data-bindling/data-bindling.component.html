@@ -1,0 +1,61 @@
+<p>data-bindling works!</p>
+
+
+<div class="row">
+    <div class="col-4">
+        On way data binding
+    </div>
+    <div class="col-4">
+
+    </div>
+    <div class="col-4">
+
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-5">
+        <div class="row">
+            <div class="col-4">
+                interpolation
+                <h3>{{courseName}}</h3>
+                <div>{{inputType}}</div>
+                <input type="text" value="{{courseName}}" placeholder="enter">
+                <input type="{{inputType}}" />
+                <div class="{{myClassName}}">danger</div>
+            </div>
+
+            <div class="col-5">
+                property binding
+                <div [class]="myClassName">Danger</div>
+                <input type="text" [value]="courseName">
+                <input [type]="inputType">
+            </div>
+            <div class="col-4"></div>
+            <div class="col-4">
+                <button class="btn btn-success" (click)="showAlert('Welcome angular')">show Welcome</button>
+                <span (click)="showAlert('thank you')">show click</span>
+                <button class="btn btn-success" (click)="changeCourseName()">change course</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-5">
+        <input type="text" [(ngModel)]="courseName" /> - {{courseName}}
+        <input type="checkbox" [(ngModel)]="isIndian"> 
+        
+        <select [(ngModel)]="stateName">
+            <option value="">select</option>
+            <option value="Maharastra">Maharastra</option>
+            <option value="Goa">Goa</option>
+            <option value="punjab">Punjab</option>
+        </select>
+    </div>
+    <div col="col-6">
+        <h1>{{firstName()}}</h1>
+
+    </div>
+
+</div>

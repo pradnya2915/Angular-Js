@@ -1,0 +1,32 @@
+<p>template-form works!</p>
+<form #form="ngForm">
+    first name<input type="text" name="f_name" #fname="ngModel" [(ngModel)]="student.f_name" required minlength="3"
+        placeholder="enter first name">
+    <br>
+    <div class="text-danger">
+        @if( fname.errors?.['required']){
+        <span> this is required</span>
+        }@else if (fname.touched && fname.errors?.['minlength']){
+        <span> minimum 3 value required</span>
+        }
+
+
+    </div>
+    <br>
+    Middle name<input type="text" name="m_name" [(ngModel)]="student.m_name" placeholder="enter Middle name">
+    <br><br>
+    last name<input type="text" name="l_name" [(ngModel)]="student.l_name" placeholder="enter last name">
+    <br><br>
+    City<input type="text" name="city" [(ngModel)]="student.city" placeholder="enter city">
+    <br><br>
+    Pincode<input type="number" name="pincode" [(ngModel)]="student.pincode" placeholder="enter pincode">
+    <br><br>
+    Mobile number<input type="number" name="mobile_number" [(ngModel)]="student.mobile_number"
+        placeholder="enter mobile number">
+    <br><br>
+    <button [disabled]="form.invalid" (click)="onSubmit()">submit</button>
+</form>
+<div>
+    <h3>{{formValue}}</h3>
+    <h3>{{formValue | json}}</h3>
+</div>

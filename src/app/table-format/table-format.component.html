@@ -1,0 +1,46 @@
+<p>table-format works!</p>
+<h2> {{title | slice:0:6}}</h2>
+<br><br>
+<h2>{{today | date}}</h2>
+
+<br><br>
+<!-- custom pipes-->
+<!-- <h6>{{ student.state | na }}</h6> 
+
+<h3>{{student.state | custom-pipe}}</h3> -->
+
+
+<!-- <h3>{{student.state | pipes}}</h3> -->
+<h2>{{student.state | pipesss }}</h2>
+
+<!-- chaining pipes  -->
+<h2>{{today | date:'fullDate' | uppercase}}</h2>
+<h2>{{today | date:'medium'}}</h2>
+<h2>{{today | date:'short'}}</h2>
+<h2>{{today | date:'dd/MM/yyyy'}}</h2>
+<h2>{{today | date:'h:mm a z'}}</h2>
+<h2>{{today | date:'mediumTime'}}</h2>
+
+<table ng-style="{'width': '100%', 'border': '1'}">
+    <tr>
+        <th>srn</th>
+        <th>name:</th>
+        <th>age:</th>
+        <th>Email:</th>
+        <th>salary</th>
+    </tr>
+
+    <!-- by using json pipe they convert object formate data into keys and values -->
+
+    <tr *ngFor="let emp of employee; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{emp.name | lowercase}}</td>
+        <td>{{emp.age }}</td>
+        <td>{{emp.email | uppercase}}</td>
+        <td>{{emp.salary | currency:"USD"}}</td>
+
+    </tr>
+
+</table>
+
+<h3>{{employee | json}}</h3>
